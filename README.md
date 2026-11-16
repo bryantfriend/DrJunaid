@@ -1,9 +1,7 @@
 # MedExams Prep
 
-A responsive, static prototype for international medical exam preparation. Open `index.html` in a browser or serve this folder with any static web server. Content, schedules, and progress are illustrative demo data; there is no backend or account system yet.
+A responsive static prototype for international medical exam preparation. Open `index.html` in a browser or serve the folder with any static web server. There is no backend or account system yet.
 
-The app uses plain HTML, CSS, and JavaScript with no build step or external assets. The sample question is for demonstration and should be reviewed by qualified educators before use as exam preparation content.
+The question bank includes four original demonstration questions and five CDC epidemiology self-assessment questions. Students can select subjects, use tutor or test mode, review explanations, and save or resume sessions in the same browser. Starting a new session replaces an unfinished local session; clearing browser storage removes saved activity. The demonstration content and original learning objectives require educator review. CDC material is archived and should be checked against current guidance. These are not past licensing-exam questions.
 
-The question bank includes four illustrative questions, subject selection, tutor and test modes, answer explanations, and recent session history stored in the browser. This sample content has not been reviewed as exam preparation material. Clearing browser storage removes the local history.
-
-Practice sessions can be saved and resumed in the same browser. Links to official USMLE sample materials and OpenStax review questions are provided on the question bank page; those external questions are not copied into this app. Starting a new session replaces any unfinished local session.
+CDC questions and answer explanations were developed by the Centers for Disease Control and Prevention, *Principles of Epidemiology in Public Health Practice*, third edition, Lesson 1, self-assessment questions 6, 9, 13, 19 and 25 and answer key. CDC materials are available from the agency at no charge. This use does not imply endorsement by CDC, HHS, or the U.S. government. The epidemiology note is an original summary based on the CDC course.
