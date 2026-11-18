@@ -8,3 +8,5 @@ The public page is a three-step interest form. Submissions are disabled until th
 4. Copy the deployed `/exec` URL into `interest/config.js` as `IGA_SUBMISSION_URL`, commit and push. Open the public form and perform a test submission, verify its row in the Sheet and then remove the test row.
 
 The web app creates an `Interest` tab if needed. Student input is stored as text to prevent spreadsheet formula interpretation. Entries are subject to Google Apps Script quotas; this minimal receiver has no spam protection or duplicate suppression. Avoid sharing the Sheet publicly.
+
+The country calling-code list is generated from the phonenumbers library (a Python port of Google libphonenumber). Country names are displayed by the browser’s Intl API. The form sends the selected calling code and local number as one phone field.

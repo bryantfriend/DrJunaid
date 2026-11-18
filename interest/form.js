@@ -5,3 +5,11 @@ next.addEventListener('click',()=>{if(step===0&&!form.querySelector('input[name=
 document.querySelector("#opening-notice").hidden=/^https:\/\/script\.google\.com\/macros\/s\/[A-Za-z0-9_-]+\/exec$/.test(window.IGA_SUBMISSION_URL||"");
 
 document.querySelector('#change-exam').addEventListener('click',()=>showStep(0));
+
+// Native select controls support keyboard type-ahead and platform mobile pickers.
+const regionNames=new Intl.DisplayNames(['en'],{type:'region'});
+const regionList=window.IGA_COUNTRY_CODES.map(([region,code])=>({region,code,name:regionNames.of(region)||region})).sort((a,b)=>a.name.localeCompare(b.name));
+const countrySelect=form.querySelector('[name="country"]'),codeSelect=document.querySelector('#phone-code'),phoneNumber=document.querySelector('#phone-number'),storedPhone=form.querySelector('[name="phone"]');
+for(const region of regionList){const countryOption=document.createElement('option');countryOption.value=region.name;countryOption.textContent=region.name;countrySelect.append(countryOption);const phoneOption=document.createElement('option');phoneOption.value='+'+region.code;phoneOption.textContent='+'+region.code+' — '+region.name;codeSelect.append(phoneOption)}
+function updatePhone(){storedPhone.value=codeSelect.value&&phoneNumber.value.trim()?codeSelect.value+' '+phoneNumber.value.trim():''}
+codeSelect.addEventListener('change',updatePhone);phoneNumber.addEventListener('input',updatePhone);
